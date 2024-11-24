@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Zen Dots;
+  src: url(../fonts/Zen_Dots/ZenDots-Regular.ttf);
+}
+
+:root {
+  --background: linear-gradient(
+    180deg,
+    rgba(0, 4, 20, 1) 0%,
+    rgba(5, 15, 54, 1) 100%
+  );
+  --primary: #1b4096;
+  --primary-2: #32519a;
+  --accent: #3571ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+  background: var(--background);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.content {
+  max-width: 90%;
+  margin: auto;
+}
+
+.button {
+  background-color: var(--primary);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: 0.1s;
+}
+
+.button:hover {
+  background-color: var(--primary-2);
+}
+
+h1 {
+  font-family: "Zen Dots", sans-serif;
+}
+
+nav a {
+  transition: 0.1s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}

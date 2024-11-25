@@ -8,7 +8,6 @@ const useFetch = (url) => {
     useEffect(() => {
 
         fetch(url, {
-            mode: "no-cors",
             headers: {'Content-Type': 'application/json'}
         })
         .then(response => {

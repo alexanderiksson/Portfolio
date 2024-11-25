@@ -11,10 +11,10 @@ export default function Home() {
             </Helmet>
 
             <div className="content">
-                <div className="w-full h-screen flex flex-col justify-center items-center">
-                    <h1 className="text-6xl mb-10">Alexander Eriksson</h1>
-                    <p className="text-2xl mb-10">Fullstack Developer, Stockholm</p>
-                    <div className="flex gap-4">
+                <div className="w-full h-screen flex flex-col justify-center items-center text-center">
+                    <h1 className="text-4xl sm:text-6xl mb-10">Alexander Eriksson</h1>
+                    <p className="text-base sm:text-2xl mb-10">Fullstack Developer, Stockholm</p>
+                    <div className="flex flex-col sm:flex-row gap-4">
                         <Link className="button" to="/contact">Contact me</Link>
                         <Link className="button" to="/portfolio">Portfolio</Link>
                     </div>

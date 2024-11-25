@@ -9,51 +9,51 @@ export default function Skills() {
             </Helmet>
 
             <div className="content">
-                <div className="w-full h-screen flex flex-col justify-center items-center">
+                <div className="w-full h-screen flex flex-row sm:flex-col justify-center items-center sm:gap-16 gap-4">
 
                     {/* Row 1 */}
-                    <div className="w-full flex justify-evenly mb-8">
+                    <div className="w-full flex flex-col sm:flex-row justify-evenly items-center gap-6">
                         <div className="flex flex-col items-center w-1/4">
                             <img src="html.svg" alt="HTML" width="50" height="50" />
-                            <p>HTML</p>
+                            <p className="font-semibold">HTML</p>
                         </div>
 
                         <div className="flex flex-col items-center w-1/4">
                             <img src="css.svg" alt="CSS" width="50" height="50" />
-                            <p>CSS</p>
+                            <p className="font-semibold">CSS</p>
                         </div>
 
                         <div className="flex flex-col items-center w-1/4">
                             <img src="js.svg" alt="JavaScript" width="50" height="50" />
-                            <p>JavaScript</p>
+                            <p className="font-semibold">JavaScript</p>
                         </div>
 
                         <div className="flex flex-col items-center w-1/4">
                             <img src="react.svg" alt="React" width="50" height="50" />
-                            <p className="mt-1">React</p>
+                            <p className="mt-1 font-semibold">React</p>
                         </div>
                     </div>
 
                     {/* Row 2 */}
-                    <div className="w-full flex justify-evenly mt-8">
+                    <div className="w-full flex flex-col sm:flex-row justify-evenly items-center gap-6">
                         <div className="flex flex-col items-center w-1/4">
                             <img src="vue.svg" alt="Vue" width="50" height="50" />
-                            <p>Vue</p>
+                            <p className="font-semibold">Vue</p>
                         </div>
 
                         <div className="flex flex-col items-center w-1/4">
                             <img src="tailwind.svg" alt="Tailwind" width="50" height="50" />
-                            <p>Tailwind</p>
+                            <p className="font-semibold">Tailwind</p>
                         </div>
 
                         <div className="flex flex-col items-center w-1/4">
                             <img src="node.svg" alt="Node.js" width="50" height="50" />
-                            <p>Node.js</p>
+                            <p className="font-semibold">Node.js</p>
                         </div>
 
                         <div className="flex flex-col items-center w-1/4">
                             <img src="php.svg" alt="PHP" width="50" height="50" />
-                            <p>PHP</p>
+                            <p className="font-semibold">PHP</p>
                         </div>
                     </div>
 

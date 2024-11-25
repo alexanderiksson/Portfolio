@@ -5,6 +5,24 @@
 }
 
 @font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
   font-family: Zen Dots;
   src: url(../fonts/Zen_Dots/ZenDots-Regular.ttf);
 }
@@ -62,6 +80,7 @@ main a:hover {
 
 .button:hover {
   background-color: var(--primary-2);
+  text-decoration: none;
 }
 
 h1 {
@@ -84,12 +103,13 @@ nav a.active {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
   min-width: 300px;
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .tags {
   display: flex;
   justify-content: center;
+  gap: .5rem;
 }
 
 .tags span {

@@ -4,7 +4,7 @@ import useFetch from '../hooks/useFetch'
 
 export default function Portfolio() {
 
-    const { data, loading, error } = useFetch("http://localhost:5173/api/portfolio.json");
+    const { data, loading, error } = useFetch(import.meta.env.VITE_PORTFOLIO_URL);
 
     if (loading) return;
     if (error) console.log(error);

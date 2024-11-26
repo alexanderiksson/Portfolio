@@ -5,7 +5,7 @@ export default function Contact() {
     return(
         <React.Fragment>
             <Helmet>
-                <title>Contact</title>
+                <title>Contact me - Alexander Eriksson</title>
             </Helmet>
 
             <div className="content">

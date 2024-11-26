@@ -5,7 +5,7 @@ export default function Skills() {
     return(
         <React.Fragment>
             <Helmet>
-                <title>Skills</title>
+                <title>Skills - Alexander Eriksson</title>
             </Helmet>
 
             <div className="content">

@@ -7,7 +7,7 @@ export default function Home() {
     return(
         <React.Fragment>
             <Helmet>
-                <title>Home</title>
+                <title>Home - Alexander Eriksson</title>
             </Helmet>
 
             <div className="content">

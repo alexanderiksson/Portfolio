@@ -17,7 +17,7 @@ export default function Portfolio() {
             </Helmet>
 
             <div className="content">
-                <div className="w-full flex flex-col items-center gap-6 py-36">
+                <div className="w-full flex flex-col items-center gap-6">
                     {data.map((project) => (
                         <PortfolioCard key={project.id} project={project} />
                     ))}

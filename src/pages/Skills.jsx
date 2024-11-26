@@ -9,10 +9,10 @@ export default function Skills() {
             </Helmet>
 
             <div className="content">
-                <div className="w-full h-screen flex flex-row sm:flex-col justify-center items-center sm:gap-16 gap-4">
+                <div className="w-full flex flex-row sm:flex-col justify-center items-center sm:gap-16 gap-4">
 
                     {/* Row 1 */}
-                    <div className="w-full flex flex-col sm:flex-row justify-evenly items-center gap-6">
+                    <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-6">
                         <div className="flex flex-col items-center w-1/4">
                             <img src="html.svg" alt="HTML" width="50" height="50" />
                             <p className="font-semibold">HTML</p>
@@ -35,7 +35,7 @@ export default function Skills() {
                     </div>
 
                     {/* Row 2 */}
-                    <div className="w-full flex flex-col sm:flex-row justify-evenly items-center gap-6">
+                    <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-6">
                         <div className="flex flex-col items-center w-1/4">
                             <img src="vue.svg" alt="Vue" width="50" height="50" />
                             <p className="font-semibold">Vue</p>

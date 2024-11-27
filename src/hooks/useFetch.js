@@ -7,11 +7,17 @@ const useFetch = (url) => {
 
     useEffect(() => {
 
+        if (!url) {
+            setError(new Error('URL is required'));
+            setLoading(false);
+            return
+        }
+
         fetch(url, {
             headers: {'Content-Type': 'application/json'}
         })
         .then(response => {
-            if (!response) {
+            if (!response.ok) {
                 throw new Error(response.status)
             }
             return response.json()

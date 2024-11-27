@@ -1,6 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
+import { NavLink } from "react-router-dom"
+import HamburgerIcon from "../assets/img/hamburger.svg"
+import CloseIcon from "../assets/img/close.svg"
+import { debounce } from "lodash"
+
 
 const Navbar = () => {
     return(
@@ -23,24 +26,30 @@ const Navbar = () => {
     );
 };
 
-export default function Header() {
+const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
     const toggleMenu = () => {
         setIsOpen((open) => !open)
     }
 
-    const [scrolled, setScrolled] = useState(false)
+
     useEffect(() => {
 
-        const handleScroll = () => {
-          window.scrollY > 50 ? setScrolled(true) : setScrolled(false)
-        }
+        const handleScroll = debounce(() => {
+            if (window.scrollY > 30) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        }, 10)
 
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener("scroll", handleScroll);
 
         return () => {
-          window.removeEventListener('scroll', handleScroll)
+          window.removeEventListener("scroll", handleScroll);
         }
       }, [])
 
@@ -48,17 +57,19 @@ export default function Header() {
     return(
         <React.Fragment>
             <header className={`flex justify-end sm:justify-center py-4 sm:py-6 fixed w-full ${scrolled ? "scrolled" : ""}`}>
+
                 <Navbar />
 
                 {/* Hamburger menu */}
                 <div className="block sm:hidden mr-8">
-                    <img src="/hamburger.svg" alt="" width="40" onClick={toggleMenu} className="cursor-pointer" />
+                    <img src={HamburgerIcon} alt="" width="40" onClick={toggleMenu} className="cursor-pointer" />
                 </div>
+
             </header>
 
             {/* Mobile nav */}
-            <div id="dropdown" className={`fixed sm:hidden h-screen w-48 px-8 py-6 bg-slate-900 ${isOpen ? "open" : ""}`}>
-                <img src="/close.svg" alt="" width="25" onClick={toggleMenu} className="cursor-pointer" />
+            <div id="dropdown" style={{right: isOpen ? 0 : "-100%" }}>
+                <img src={CloseIcon} alt="" width="25" onClick={toggleMenu} className="cursor-pointer" />
                 <nav className="mt-8">
                     <ul>
                         <li className="my-8">
@@ -81,3 +92,5 @@ export default function Header() {
 
     )
 }
+
+export default Header

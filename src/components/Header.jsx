@@ -57,7 +57,7 @@ export default function Header() {
             </header>
 
             {/* Mobile nav */}
-            <div id="dropdown" className={`fixed h-screen w-48 px-8 py-6 bg-slate-900 ${isOpen ? "open" : ""}`}>
+            <div id="dropdown" className={`fixed sm:hidden h-screen w-48 px-8 py-6 bg-slate-900 ${isOpen ? "open" : ""}`}>
                 <img src="/close.svg" alt="" width="25" onClick={toggleMenu} className="cursor-pointer" />
                 <nav className="mt-8">
                     <ul>

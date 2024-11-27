@@ -18,7 +18,9 @@ const PortfolioCard = ({ project }) => {
                 ))}
             </div>
             <p>{project.text}</p>
-            <a href={project.github} className="button">Show on GitHub</a>
+            {project.github && (
+              <a href={project.github} className="button">Show on GitHub</a>
+            )}
         </div>
     </div>
   )

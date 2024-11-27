@@ -29,7 +29,7 @@ export default function Skills() {
             </Helmet>
 
             <div className="content">
-                <section className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <section className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-20">
                     {skills.map((skill, i) => (
                         <Skill key={i} icon={skill.icon} label={skill.label} progress={skill.progress} />
                     ))}

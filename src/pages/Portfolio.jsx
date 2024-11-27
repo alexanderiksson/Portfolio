@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet-async'
 import useFetch from '../hooks/useFetch'
 import PortfolioCard from '../components/PortfolioCard';
 
@@ -17,11 +17,11 @@ export default function Portfolio() {
             </Helmet>
 
             <div className="content">
-                <div className="w-full flex flex-col items-center gap-6">
+                <section className="w-full flex flex-col items-center gap-6">
                     {data.map((project) => (
                         <PortfolioCard key={project.id} project={project} />
                     ))}
-                </div>
+                </section>
             </div>
         </React.Fragment>
     )

@@ -1,5 +1,7 @@
 import React from 'react'
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet-async'
+import GithubIcon from '../assets/img/github.svg'
+import LinkedinIcon from '../assets/img/linkedin.svg'
 
 export default function Contact() {
     return(
@@ -9,22 +11,22 @@ export default function Contact() {
             </Helmet>
 
             <div className="content">
-                <div className="w-full flex flex-col justify-center items-center">
+                <section className="w-full flex flex-col justify-center items-center">
                     <p className="max-w-md text-center mb-12">If you have any questions or want to know more about me, don't hesitate to reach out.</p>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-8">
                         <div className="flex items-center gap-4">
-                            <a className="text-white" href="mailto:hello@alexeriksson.se">hello@alexeriksson.se</a>
+                            <a className="text-white font-medium text-xl" href="mailto:hello@alexeriksson.se">hello@alexeriksson.se</a>
                         </div>
                         <div className="flex justify-center items-center gap-4">
-                            <a className="text-white" href="https://www.linkedin.com/in/alexander-eriksson-302bb8237/">
-                                <img src="/linkedin.svg" alt="" width="40px"/>
+                            <a className="text-white" href="https://www.linkedin.com/in/alexander-eriksson-302bb8237/" aria-label="Visit my LinkedIn profile">
+                                <img src={LinkedinIcon} alt="LinkedIn Profile" width="40px"/>
                             </a>
-                            <a className="text-white" href="https://github.com/alexanderiksson">
-                                <img src="/github.svg" alt="" width="32px"/>
+                            <a className="text-white" href="https://github.com/alexanderiksson" aria-label="Visit my GitHub profile">
+                                <img src={GithubIcon} alt="GitHub Profile" width="32px"/>
                             </a>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </React.Fragment>
     )

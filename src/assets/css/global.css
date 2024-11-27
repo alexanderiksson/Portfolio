@@ -28,11 +28,7 @@
 }
 
 :root {
-  --background: linear-gradient(
-    180deg,
-    #000414 0%,
-    #050f36 100%
-  );
+  --background: linear-gradient(180deg, #000414 0%, #050f36 100%);
   --background-2: #000414;
   --primary: #1b4096;
   --primary-2: #32519a;
@@ -151,6 +147,9 @@ nav a.active {
   gap: 0.25rem;
 }
 
+.progress-bar {
+  background-color: var(--accent);
+}
 
 @media screen and (max-width: 1400px) {
   .content {

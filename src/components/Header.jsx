@@ -35,7 +35,6 @@ const Header = () => {
         setIsOpen((open) => !open)
     }
 
-
     useEffect(() => {
 
         const handleScroll = debounce(() => {

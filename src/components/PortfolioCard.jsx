@@ -13,8 +13,10 @@ const PortfolioCard = ({ project }) => {
 
             <div className="tags">
                 {project.tags.map((tag) => (
-                    <span key={tag.name} className="tag-item flex items-center gap-2">
-                        <img src={tag.icon} alt={tag.name} width="16" height="16" />
+                    <span key={tag.name} className="flex items-center gap-2">
+                        {tag.icon && (
+                            <img src={tag.icon} alt={tag.name} width="16" height="16" />
+                        )}
                         {tag.name}
                     </span>
                 ))}

@@ -89,8 +89,12 @@ main a:hover {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .button {
@@ -147,27 +151,6 @@ nav a.active {
   transition: all 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-}
-
-.portfolio-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 0.5rem;
-}
-
-.tags {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.tags span {
-  background-color: rgb(255, 255, 255, 0.1);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
 }
 
 .progress-bar {

@@ -8,19 +8,11 @@ import { debounce } from "lodash"
 const Navbar = () => {
     return(
         <nav className="hidden sm:block">
-            <ul className="flex justify-center">
-                <li className="mx-4 sm:mx-8">
-                    <NavLink to="/">Home</NavLink>
-                </li>
-                <li className="mx-4 sm:mx-8">
-                    <NavLink to="/skills">Skills</NavLink>
-                </li>
-                <li className="mx-4 sm:mx-8">
-                    <NavLink to="/portfolio">Portfolio</NavLink>
-                </li>
-                <li className="mx-4 sm:mx-8">
-                    <NavLink to="/contact">Contact</NavLink>
-                </li>
+            <ul className="flex justify-center gap-16">
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/skills">Skills</NavLink></li>
+                <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+                <li><NavLink to="/contact">Contact</NavLink></li>
             </ul>
         </nav>
     );
@@ -38,11 +30,7 @@ const Header = () => {
     useEffect(() => {
 
         const handleScroll = debounce(() => {
-            if (window.scrollY > 30) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            window.scrollY > 30 ? setScrolled(true) : setScrolled(false);
         }, 10)
 
         window.addEventListener("scroll", handleScroll);
@@ -69,20 +57,12 @@ const Header = () => {
             {/* Mobile nav */}
             <div id="dropdown" style={{right: isOpen ? 0 : "-100%" }}>
                 <img src={CloseIcon} alt="" width="25" onClick={toggleMenu} className="cursor-pointer" />
-                <nav className="mt-8">
-                    <ul>
-                        <li className="my-8">
-                            <NavLink onClick={toggleMenu} to="/">Home</NavLink>
-                        </li>
-                        <li className="my-8">
-                            <NavLink onClick={toggleMenu} to="/skills">Skills</NavLink>
-                        </li>
-                        <li className="my-8">
-                            <NavLink onClick={toggleMenu} to="/portfolio">Portfolio</NavLink>
-                        </li>
-                        <li className="my-8">
-                            <NavLink onClick={toggleMenu} to="/contact">Contact</NavLink>
-                        </li>
+                <nav className="mt-10">
+                    <ul className="flex flex-col gap-10">
+                        <li><NavLink onClick={toggleMenu} to="/">Home</NavLink></li>
+                        <li><NavLink onClick={toggleMenu} to="/skills">Skills</NavLink></li>
+                        <li><NavLink onClick={toggleMenu} to="/portfolio">Portfolio</NavLink></li>
+                        <li><NavLink onClick={toggleMenu} to="/contact">Contact</NavLink></li>
                     </ul>
                 </nav>
             </div>

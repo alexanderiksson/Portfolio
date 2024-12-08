@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import GithubIcon from '../assets/img/github.svg'
 import LinkedinIcon from '../assets/img/linkedin.svg'
 
+
 export default function Contact() {
     return(
         <React.Fragment>

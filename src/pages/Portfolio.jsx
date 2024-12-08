@@ -23,7 +23,7 @@ export default function Portfolio() {
                 <section className="w-full flex flex-col items-center gap-6">
                     {(() => {
                         if (Array.isArray(data) && data.length > 0) {
-                            return data.map((project) => (
+                            return data.slice().reverse().map((project) => (
                                 <PortfolioCard key={project.id} project={project} />
                             ))
                         } else {

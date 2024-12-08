@@ -3,19 +3,15 @@ import { Helmet } from 'react-helmet-async'
 import Skill from '../components/Skill'
 import useFetch from '../hooks/useFetch'
 import Loader from '../components/Loader';
+import Error from '../components/Error';
 
 
 export default function Skills() {
 
     const { data, loading, error } = useFetch(import.meta.env.VITE_SKILLS_URL);
 
-    if (loading) {
-        return <Loader />
-    }
-
-    if (error) {
-        console.error(error)
-    }
+    if (loading) { return <Loader /> }
+    if (error) { return <Error /> }
 
     return(
         <React.Fragment>

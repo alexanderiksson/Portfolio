@@ -3,18 +3,15 @@ import { Helmet } from 'react-helmet-async'
 import useFetch from '../hooks/useFetch'
 import PortfolioCard from '../components/PortfolioCard';
 import Loader from '../components/Loader';
+import Error from '../components/Error';
+
 
 export default function Portfolio() {
 
     const { data, loading, error } = useFetch(import.meta.env.VITE_PORTFOLIO_URL);
 
-    if (loading) {
-        return <Loader />
-    }
-
-    if (error) {
-        console.error(error)
-    }
+    if (loading) { return <Loader /> }
+    if (error) { <Error msg="Failed to load projects" /> }
 
     return(
         <React.Fragment>

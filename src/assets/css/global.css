@@ -70,7 +70,8 @@ main a:hover {
 }
 
 .content {
-  width: 1280px;
+  max-width: 1280px;
+  width: 90%;
   margin: auto;
 }
 
@@ -155,10 +156,4 @@ nav a.active {
 
 .progress-bar {
   background-color: var(--accent);
-}
-
-@media screen and (max-width: 1400px) {
-  .content {
-    width: 90%;
-  }
 }

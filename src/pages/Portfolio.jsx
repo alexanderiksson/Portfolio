@@ -11,7 +11,7 @@ export default function Portfolio() {
     const { data, loading, error } = useFetch(import.meta.env.VITE_PORTFOLIO_URL);
 
     if (loading) { return <Loader /> }
-    if (error) { <Error msg="Failed to load projects" /> }
+    if (error) { <Error /> }
 
     return(
         <React.Fragment>

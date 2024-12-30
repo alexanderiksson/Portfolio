@@ -8,7 +8,7 @@ import Error from '../components/Error';
 
 export default function Portfolio() {
 
-    const { data, loading, error } = useContentful('portfolio', {order: 'sys.createdAt'});
+    const { data, loading, error } = useContentful('portfolio');
 
     if (loading) { return <Loader /> }
     if (error) { <Error /> }

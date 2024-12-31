@@ -1,36 +1,10 @@
-@font-face {
-  font-family: Poppins;
-  src: url(../fonts/Poppins/Poppins-Regular.ttf);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(../fonts/Poppins/Poppins-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(../fonts/Poppins/Poppins-Bold.ttf);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Zen Dots;
-  src: url(../fonts/Zen_Dots/ZenDots-Regular.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
 :root {
   --background: radial-gradient(
     circle,
-    rgba(6, 38, 66, 1) 0%,
+    rgb(6, 30, 66) 0%,
     rgba(0, 9, 17, 1) 100%
   );
   --background-2: rgb(0, 9, 17);
@@ -52,7 +26,7 @@ html,
   background: var(--background);
   background-color: var(--background-2);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   display: flex;
   flex-direction: column;

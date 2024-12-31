@@ -5,7 +5,7 @@ import CloseIcon from "../assets/img/close.svg"
 
 const Navbar = () => {
     return(
-        <nav className="hidden sm:block py-4 px-10 bg-white bg-opacity-5 rounded-full backdrop-blur-lg shadow-lg">
+        <nav className="hidden sm:block py-4 px-10 bg-white bg-opacity-5 rounded-full backdrop-blur-xl shadow-lg border border-white border-opacity-5">
             <ul className="flex justify-center gap-16">
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/skills">Skills</NavLink></li>

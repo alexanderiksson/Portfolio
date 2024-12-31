@@ -21,7 +21,7 @@ export default function Portfolio() {
 
             <div className="content">
 
-                <section className="w-full flex flex-col items-center gap-6">
+                <section className="w-full flex flex-col items-center gap-8">
                     {(() => {
                         if (Array.isArray(data) && data.length > 0) {
 

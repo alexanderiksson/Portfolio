@@ -3,7 +3,7 @@ import React from 'react';
 const PortfolioCard = ({ project }) => {
 
     return(
-        <div className="bg-white bg-opacity-5 rounded-lg p-8 flex flex-col md:flex-row items-center gap-8 md:gap-6 w-full shadow-xl">
+        <div className="bg-white bg-opacity-5 rounded-lg p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full shadow-xl">
 
             <div className="flex justify-center w-full md:w-1/2">
                 <img src={`https:${project?.fields?.image?.fields?.file?.url}`} alt={`Image for ${project.fields.title}`} className="w-full" loading="lazy" />

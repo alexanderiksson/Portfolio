@@ -31,7 +31,7 @@ const Header = () => {
                 <Navbar />
 
                 {/* Hamburger menu */}
-                <div className="block sm:hidden mr-8">
+                <div className="block sm:hidden mr-4 p-2 bg-white bg-opacity-10 backdrop-blur-xl rounded-full shadow-lg">
                     <img src={HamburgerIcon} alt="menu" width="40" onClick={toggleMenu} className="cursor-pointer" />
                 </div>
 

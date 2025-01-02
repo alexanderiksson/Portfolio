@@ -9,7 +9,7 @@ const PortfolioCard = ({ project }) => {
                 <img src={`https:${project?.fields?.image?.fields?.file?.url}`} alt={`Image for ${project.fields.title}`} className="w-full" loading="lazy" />
             </div>
 
-            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-1/2">
+            <div className="flex flex-col gap-6 items-center md:items-start w-full md:w-1/2">
 
                 <h2 className="text-2xl font-bold">{project.fields.title}</h2>
 

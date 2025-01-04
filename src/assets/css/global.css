@@ -4,7 +4,7 @@
 :root {
   --background: radial-gradient(
     circle,
-    rgb(6, 30, 66) 0%,
+    rgb(4, 20, 44) 0%,
     rgba(0, 9, 17, 1) 100%
   );
   --background-2: rgb(0, 9, 17);

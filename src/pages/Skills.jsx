@@ -21,7 +21,7 @@ export default function Skills() {
 
             <div className="content">
 
-                <section className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-20">
+                <section className="grid grid-cols-2 md:grid-cols-5 gap-x-12 gap-y-24">
                     {data.map((skill) => (
                         <Skill
                         key={skill.fields.name}

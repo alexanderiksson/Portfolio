@@ -53,6 +53,17 @@ main a:hover {
   margin: auto;
 }
 
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.page-description {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
 .loader {
   position: absolute;
   top: 50%;

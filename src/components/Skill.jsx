@@ -8,8 +8,8 @@ const Skill = ({ icon, label, progress }) => {
             <img
             src={`https:${icon?.fields?.file?.url}`}
             alt={label}
-            width="50"
-            height="50" />
+            width="40"
+            height="40" />
 
             <p className="font-semibold">{label}</p>
 

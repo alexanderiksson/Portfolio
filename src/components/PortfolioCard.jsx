@@ -4,13 +4,13 @@ import Arrow from '../assets/img/arrow.svg'
 const PortfolioCard = ({ project }) => {
 
     return(
-        <div className="bg-white bg-opacity-5 rounded-lg p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full shadow-xl">
+        <div className="bg-white bg-opacity-5 rounded-lg p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full shadow-xl">
 
-            <div className="flex justify-center w-full md:w-1/2">
-                <img src={`https:${project?.fields?.image?.fields?.file?.url}`} alt={`Image for ${project.fields.title}`} className="w-full" loading="lazy" />
+            <div className="flex justify-center items-center w-full md:w-1/2">
+                <img src={`https:${project?.fields?.image?.fields?.file?.url}`} alt={`Image for ${project.fields.title}`} className="w-4/5" loading="lazy" />
             </div>
 
-            <div className="flex flex-col gap-6 items-center md:items-start w-full md:w-1/2">
+            <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-1/2">
 
                 <h2 className="text-2xl font-semibold">{project.fields.title}</h2>
 

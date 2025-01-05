@@ -13,13 +13,15 @@ export default function Contact() {
             </Helmet>
 
             <div className="content">
-                <section className="w-full flex flex-col justify-center items-center">
 
-                    <h1 className="text-4xl mb-20">Send me a message</h1>
+                <h1 className="page-title">Contact me</h1>
+                <p className="page-description">Send me a message.</p>
+
+                <div className="w-full flex flex-col justify-center items-center">
 
                     <ContactForm />
 
-                </section>
+                </div>
             </div>
         </React.Fragment>
     )

@@ -21,7 +21,10 @@ export default function Portfolio() {
 
             <div className="content">
 
-                <section className="w-full flex flex-col items-center gap-8">
+                <h1 className="page-title">Portfolio</h1>
+                <p className="page-description">My latest projects.</p>
+
+                <div className="w-full flex flex-col items-center gap-8">
                     {(() => {
                         if (Array.isArray(data) && data.length > 0) {
 
@@ -33,7 +36,7 @@ export default function Portfolio() {
                             return <p>No projects to display.</p>
                         }
                     })()}
-                </section>
+                </div>
 
             </div>
         </React.Fragment>

@@ -15,7 +15,7 @@ export default function Contact() {
             <div className="content">
 
                 <h1 className="page-title">Contact me</h1>
-                <p className="page-description">Send me a message.</p>
+                <p className="page-description">Don't hesitate to send me a message through the form below<br/>if you have any questions.</p>
 
                 <div className="w-full flex flex-col justify-center items-center">
 

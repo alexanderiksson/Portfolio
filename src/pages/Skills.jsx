@@ -21,9 +21,6 @@ export default function Skills() {
 
             <div className="content">
 
-                <h1 className="page-title">Skills</h1>
-                <p className="page-description">My skills.</p>
-
                 <section className="grid grid-cols-2 md:grid-cols-5 gap-x-12 gap-y-24">
                     {data.map((skill) => (
                         <Skill

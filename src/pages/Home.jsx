@@ -12,8 +12,8 @@ export default function Home() {
 
             <div className="content">
                 <section className="w-full flex flex-col justify-center items-center text-center gap-10">
-                    <h1 className="text-4xl sm:text-6xl">Alexander Eriksson</h1>
-                    <p className="text-base sm:text-2xl">Fullstack Developer, Stockholm</p>
+                    <h1 className="text-4xl sm:text-5xl">Alexander Eriksson</h1>
+                    <p className="text-base sm:text-xl">Frontend Developer, Stockholm</p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link className="button" to="/contact">Contact me</Link>
                         <Link className="button" to="/portfolio">Portfolio</Link>

@@ -12,7 +12,7 @@ const PortfolioCard = ({ project }) => {
 
             <div className="flex flex-col gap-4 items-center md:items-start w-full md:w-1/2">
 
-                <h2 className="text-2xl font-semibold">{project.fields.title}</h2>
+                <h2 className="text-2xl font-semibold text-center">{project.fields.title}</h2>
 
                 <div className="flex gap-2 flex-wrap justify-center">
 

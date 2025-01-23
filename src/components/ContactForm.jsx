@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+    const form = useRef();
 
     const [alert, setAlert] = useState("")
     const [alertStyle, setAlertStyle] = useState("")
@@ -8,45 +11,28 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const form = e.target
-        const data = {
-            name: form.name.value,
-            email: form.email.value,
-            msg: form.message.value
-        }
+        setAlert("Sending...")
+        setAlertStyle("bg-blue-500")
 
-        if (!data.name || !data.email || !data.msg) {
-
-            setAlert("Please fill out all fields!")
-            setAlertStyle("bg-red-500")
-
-        } else {
-
-            const webhook = import.meta.env.VITE_ZAPIER_HOOK_URL
-
-            fetch(webhook, {
-                method: "POST",
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(response.status)
-                }
+        emailjs
+        .sendForm('service_w4r7hwo', 'template_z70d7rw', form.current, {
+            publicKey: 'WZwgN1nzjJgqg5Wtu',
+        })
+        .then(
+            () => {
                 setAlert("Your message has been sent!")
                 setAlertStyle("bg-green-500")
-                form.reset()
-            })
-            .catch(error => {
-                console.error(error)
+            },
+            (error) => {
+                console.log('FAILED...', error);
                 setAlert("Something went wrong!")
                 setAlertStyle("bg-red-500")
-            })
-        }
-
+            },
+        );
     }
 
     return(
-        <form className="w-full max-w-lg flex flex-col gap-8" onSubmit={handleSubmit}>
+        <form className="w-full max-w-lg flex flex-col gap-8" ref={form} onSubmit={handleSubmit}>
             <div className="flex flex-col gap-2">
                 <label htmlFor="name">Name</label>
                 <input

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import client from './contentfulClient';
+import { useState, useEffect } from "react";
+import client from "./contentfulClient";
 
 const useContentful = (contentType, query = {}) => {
     const [data, setData] = useState([]);
@@ -12,13 +12,13 @@ const useContentful = (contentType, query = {}) => {
                 setLoading(true);
 
                 const response = await client.getEntries({
-                content_type: contentType,
-                ...query,
+                    content_type: contentType,
+                    ...query,
                 });
 
                 setData(response.items);
             } catch (err) {
-                console.error('Error fetching Contentful data:', err);
+                console.error("Error fetching Contentful data:", err);
                 setError(err);
             } finally {
                 setLoading(false);

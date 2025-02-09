@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Error = ({ msg = "Something went wrong..." }) => {
-
-    return(
+    return (
         <div className="content">
             <p className="text-center">{msg}</p>
         </div>
-    )
-}
+    );
+};
 
-export default Error
+export default Error;

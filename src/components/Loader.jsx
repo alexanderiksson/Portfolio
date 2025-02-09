@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Loader = () => {
-    return(
+    return (
         <div className="loader">
             <div class="dot-spinner">
                 <div class="dot-spinner__dot"></div>
@@ -14,7 +14,7 @@ const Loader = () => {
                 <div class="dot-spinner__dot"></div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Loader
+export default Loader;

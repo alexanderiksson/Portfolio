@@ -1,38 +1,41 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-
     const form = useRef();
 
-    const [alert, setAlert] = useState("")
-    const [alertStyle, setAlertStyle] = useState("")
+    const [alert, setAlert] = useState("");
+    const [alertStyle, setAlertStyle] = useState("");
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        setAlert("Sending...")
-        setAlertStyle("bg-blue-500")
+        setAlert("Sending...");
+        setAlertStyle("bg-blue-500");
 
         emailjs
-        .sendForm('service_w4r7hwo', 'template_z70d7rw', form.current, {
-            publicKey: 'WZwgN1nzjJgqg5Wtu',
-        })
-        .then(
-            () => {
-                setAlert("Your message has been sent!")
-                setAlertStyle("bg-green-500")
-            },
-            (error) => {
-                console.log('FAILED...', error);
-                setAlert("Something went wrong!")
-                setAlertStyle("bg-red-500")
-            },
-        );
-    }
+            .sendForm("service_w4r7hwo", "template_z70d7rw", form.current, {
+                publicKey: "WZwgN1nzjJgqg5Wtu",
+            })
+            .then(
+                () => {
+                    setAlert("Your message has been sent!");
+                    setAlertStyle("bg-green-500");
+                },
+                (error) => {
+                    console.log("FAILED...", error);
+                    setAlert("Something went wrong!");
+                    setAlertStyle("bg-red-500");
+                }
+            );
+    };
 
-    return(
-        <form className="w-full max-w-lg flex flex-col gap-8" ref={form} onSubmit={handleSubmit}>
+    return (
+        <form
+            className="w-full max-w-lg flex flex-col gap-8"
+            ref={form}
+            onSubmit={handleSubmit}
+        >
             <div className="flex flex-col gap-2">
                 <label htmlFor="name">Name</label>
                 <input
@@ -64,12 +67,17 @@ const ContactForm = () => {
                 ></textarea>
             </div>
 
-            {alert && <p className={`${alertStyle} w-full p-2 bg-opacity-30 backdrop-blur-lg rounded-sm text-center`}>{alert}</p>}
+            {alert && (
+                <p
+                    className={`${alertStyle} w-full p-2 bg-opacity-30 backdrop-blur-lg rounded-sm text-center`}
+                >
+                    {alert}
+                </p>
+            )}
 
             <button className="button">Send</button>
-
         </form>
-    )
-}
+    );
+};
 
-export default ContactForm
+export default ContactForm;
